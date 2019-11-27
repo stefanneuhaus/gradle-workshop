@@ -7,11 +7,9 @@
 Root project 'multi-project-build'
 +--- Project ':api'
 \--- Project ':core'
-     +--- Project ':core:service-a'
-     \--- Project ':core:service-b'
 ```
 
-* Apply the `java` plugin to all of its sub-projects (recursively).
+* Apply the `java` plugin to all of its sub-projects.
 * Redefine the name of the sub-projects' build script to the respective project's name.
 * When executing the `compileJava` task on the root project, verify that the task with the same name is being executed on every sub-project. You can use the
  `--console plain` option to see every executed task in the console.
