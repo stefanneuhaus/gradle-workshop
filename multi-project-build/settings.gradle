@@ -2,3 +2,8 @@ rootProject.name = 'multi-project-build'
 
 include 'api'
 include 'core'
+
+
+rootProject.children.each { subProject ->
+    subProject.buildFileName = "${subProject.name}.gradle"
+}
