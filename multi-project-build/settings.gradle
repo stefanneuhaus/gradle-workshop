@@ -1,1 +1,4 @@
 rootProject.name = 'multi-project-build'
+
+include 'api'
+include 'core'
