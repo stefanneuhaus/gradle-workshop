@@ -2,7 +2,7 @@
 
 ## Exercise 1: Client Build failing
 
-* Go to the "client" Build and apply a plugin with the ID `com.rewedigital.git-commit` and version `1.0`. Verify that the build fails complaining about the
+* Go to the "client" Build and apply a plugin with the ID `com.rewedigital.gitcommit` and version `1.0`. Verify that the build fails complaining about the
  unresolvable plugin.
 
 
