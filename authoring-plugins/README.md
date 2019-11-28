@@ -1,4 +1,4 @@
-# Block 3: Authoring Binary Plugins
+# Authoring Binary Plugins
 
 ## Exercise 1: Client Build failing
 
@@ -12,7 +12,8 @@
  output during the task's execution and configuration phase.
 * If you used the `init` task to bootstrap the plugin build, fix the tests.
 * Verify that the project builds successfully.
-* Apply the [`maven-publish` core plugin](https://docs.gradle.org/current/userguide/publishing_maven.html) and publish your built plugin to your local maven repository.
+* Apply the [`maven-publish` core plugin](https://docs.gradle.org/current/userguide/publishing_maven.html), provide proper maven coordinates for your project
+ and publish your built plugin to your local maven repository.
 
 
 ## Exercise 3: Client Build passing
