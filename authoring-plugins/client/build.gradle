@@ -1,0 +1,3 @@
+plugins {
+    id 'com.rewedigital.gitcommit' version '1.0'
+}
