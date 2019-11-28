@@ -1,0 +1,47 @@
+plugins {
+    // Apply the Java Gradle plugin development plugin to add support for developing Gradle plugins
+    id 'java-gradle-plugin'
+
+    // Apply the Groovy plugin to add support for Groovy (used in tests)
+    id 'groovy'
+
+    // publish plugin
+    id 'maven-publish'
+}
+
+repositories {
+    jcenter()
+}
+
+group 'org.rewedigital.gradleworkshop'
+version '1.0'
+
+dependencies {
+    testImplementation 'org.spockframework:spock-core:1.3-groovy-2.5'
+}
+
+gradlePlugin {
+    plugins {
+        gitCommit {
+            id = 'com.rewedigital.gitcommit'
+            implementationClass = 'plugin.PluginPlugin'
+        }
+    }
+}
+
+sourceSets {
+    functionalTest {
+    }
+}
+
+gradlePlugin.testSourceSets(sourceSets.functionalTest)
+configurations.functionalTestImplementation.extendsFrom(configurations.testImplementation)
+
+task functionalTest(type: Test) {
+    testClassesDirs = sourceSets.functionalTest.output.classesDirs
+    classpath = sourceSets.functionalTest.runtimeClasspath
+}
+
+functionalTest.shouldRunAfter(tasks.test)
+
+check.dependsOn(tasks.functionalTest)
