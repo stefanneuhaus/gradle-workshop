@@ -1,3 +1,15 @@
 plugins {
     id 'com.rewedigital.gitcommit' version '1.0'
 }
+
+conversation {
+    hello 'mom'
+    projects {
+        foo {
+            content1 = 'bla'
+        }
+        bar {
+            content2 = 'blub'
+        }
+    }
+}
